@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Тесты" Height="450" Width="800">
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Базы данных (макс 22):" Width="150"/>
+            <TextBox x:Name="dbScore" x:FieldModifier="public" Width="40" Text="0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Разработка ПО (макс 38):" Width="150"/>
+            <TextBox x:Name="devScore" x:FieldModifier="public" Width="40" Text="0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Обслуживание (макс 20):" Width="150"/>
+            <TextBox x:Name="supportScore" x:FieldModifier="public" Width="40" Text="0"/>
+        </StackPanel>
+        <Button Content="Посчитать" Click="Calculate_Click"/>
+        <StackPanel Margin="0,20">
+            <TextBlock x:Name="resultText" x:FieldModifier="public" FontSize="14" Text="Всего: 0"/>
+            <TextBlock x:Name="gradeText" x:FieldModifier="public" FontSize="14" FontWeight="Bold" Text="Оценка: "/>
+        </StackPanel>
+    </StackPanel>
+</Window>
